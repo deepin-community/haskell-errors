@@ -1,0 +1,66 @@
+Source: haskell-errors
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-exceptions-dev (>= 0.6),
+ libghc-exceptions-dev (<< 0.11),
+ libghc-exceptions-prof,
+ libghc-safe-dev (>= 0.3.3),
+ libghc-safe-dev (<< 0.4),
+ libghc-safe-dev (>= 0.3.3),
+ libghc-safe-prof,
+ libghc-transformers-compat-dev (>= 0.4),
+ libghc-transformers-compat-dev (<< 0.7),
+ libghc-transformers-compat-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-exceptions-doc,
+ libghc-safe-doc,
+ libghc-transformers-compat-doc,
+Standards-Version: 4.5.0
+Homepage: https://hackage.haskell.org/package/errors
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-errors
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-errors]
+
+Package: libghc-errors-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: simplified error handling${haskell:ShortBlurb}
+ This library encourages an error-handling style that directly uses the
+ type system, rather than out-of-band exceptions.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-errors-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: simplified error handling${haskell:ShortBlurb}
+ This library encourages an error-handling style that directly uses the
+ type system, rather than out-of-band exceptions.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-errors-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: simplified error handling${haskell:ShortBlurb}
+ This library encourages an error-handling style that directly uses the
+ type system, rather than out-of-band exceptions.
+ .
+ ${haskell:Blurb}
